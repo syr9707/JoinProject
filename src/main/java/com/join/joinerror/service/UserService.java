@@ -2,12 +2,14 @@ package com.join.joinerror.service;
 
 import com.join.joinerror.domain.User;
 import com.join.joinerror.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     // 성공 메세지를 던져주는 String
     public String join(String userName, String password) {
