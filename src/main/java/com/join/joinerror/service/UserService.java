@@ -5,6 +5,7 @@ import com.join.joinerror.exception.AppException;
 import com.join.joinerror.exception.ErrorCode;
 import com.join.joinerror.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final BCryptPasswordEncoder encoder;
 
     // 성공 메세지를 던져주는 String
     public String join(String userName, String password) {
@@ -25,7 +27,7 @@ public class UserService {
         // 저장 (save)
         User user = User.builder()
                 .userName(userName)
-                .password(password)
+                .password(encoder.encode(password))
                 .build();
         userRepository.save(user);
 
