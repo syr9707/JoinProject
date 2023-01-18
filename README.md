@@ -1,7 +1,7 @@
 # JoinProject
 Various Errors
 
-## 회원가입(Join)만들기 A to Z
+## 회원가입(Join)만들기 연습
 1. POST /api/v1/users/join 만들기
 2. 회원가입 성공 Controller Test
 3. 회원가입 실패 - userName 중복 Controller Test

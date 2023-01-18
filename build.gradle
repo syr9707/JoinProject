@@ -30,7 +30,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-test
-	testImplementation group: 'org.springframework.security', name: 'spring-security-test', version: '5.8.0'
+	testImplementation group: 'org.springframework.security', name: 'spring-security-test'
 
 }
 
